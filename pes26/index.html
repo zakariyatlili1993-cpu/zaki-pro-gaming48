@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ZAKI PES 2026</title>
+<style>
+body{
+background:#0d0d0d;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+h1{color:#00ffcc;}
+.group{margin:40px auto;width:90%;}
+table{margin:auto;border-collapse:collapse;width:100%;margin-bottom:30px;}
+th,td{border:1px solid #00ffcc;padding:8px;}
+th{background:#111;}
+</style>
+</head>
+<body>
+
+<h1>ZAKI PRO GAMING</h1>
+<h2>PES 2026 - 48 Players | 12 Groups</h2>
+
+<script>
+const groups = {
+1:["hassan ghandour","omer tabet","mohammed belhadf","amine hajji"],
+2:["walid london","rayane basdouk","abderazak hamidi","takichi"],
+3:["aziz rahhaoui","marouane tamiri","youssef elmoussi","abdelwahed harra"],
+4:["marouane ezzin","zakaria bouchabti","isslam belhaj","ihab elmahi"],
+5:["ahmed el kamili","yahya hakimi","med azry","houssam elhirmi"],
+6:["abdellah","houssam hajjaoui","amine hssaini","zakariae sarghouchni"],
+7:["mohammed eteyyeb","youssef tabti","bilal mherzi","aymane elmahi"],
+8:["reda said","taha aymane alla","mouad boulifa","mohammed fezzari"],
+9:["amine jebbouri","bader ammouri","hichem bertat","ayyou b tabib"],
+10:["abdelatif azzaoui","ahmed goumat","salim abdellouai","omar outmani"],
+11:["houari bariego","hicham bounab","mohammed bolbol","zakariae charcef"],
+12:["youssef kouchaij","ibrahim elmoubark","mouhcine grouz","mohammed zaoui"]
+};
+
+for(let i=1;i<=12;i++){
+document.write(`
+<div class="group">
+<h3>Group ${i}</h3>
+<table>
+<tr>
+<th>Player</th>
+<th>MP</th>
+<th>W</th>
+<th>D</th>
+<th>L</th>
+<th>GF</th>
+<th>GA</th>
+<th>GD</th>
+<th>Pts</th>
+<th>YC</th>
+<th>RC</th>
+</tr>
+${groups[i].map(p=>`
+<tr>
+<td>${p}</td>
+<td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td>
+</tr>`).join("")}
+</table>
+</div>
+`)
+}
+</script>
+
+</body>
+</html>
